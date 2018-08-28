@@ -24,7 +24,10 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 	background: #5D9CEC;
 	color: #fff;
 }
-
+.locationsss img {
+	width: 23px;
+	height: 31px;
+}
 .sidebarspost img{
 	height: 160px;
 	width: 100%;
@@ -49,8 +52,18 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 	height: 55px;
 	width: 80px;
 }
-
-
+.modern-header.modern-header-theme-colored2 .header-nav .header-nav-wrapper.scroll-to-fixed-fixed {
+	background: #FFFFFF !important;
+}
+.menuzord-menu{
+	padding: 0 15px;
+}
+.menuzord-menu > li {
+	padding: 20px 0px !important;
+}
+.modern-header:not(.modern-header-nav-autopadding) .menuzord-menu > li > a {
+	padding: 10px 15px;
+}
 .dentalwidth.vc_row {
 	margin-left: inherit;
 	margin-right: inherit;
@@ -236,3 +249,21 @@ a.liked span.sl-count,
 }
 
 /* Wrapper post like css end */
+
+
+
+
+
+
+
+@media all and (max-width: 1000px){
+	.menuzord-menu > li {
+		padding: 0px 12px !important;
+	}
+	.menuzord-menu{
+		padding: 15px 15px;
+	}
+	.modern-header:not(.modern-header-nav-autopadding) .menuzord-menu > li > a {
+		padding: 20px 15px;
+	}
+}

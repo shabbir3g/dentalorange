@@ -251,10 +251,11 @@
                 </div>
               </div>
               <div class="col-xs-12 col-sm-4 col-md-4">
-                <div class="widget no-border sm-text-center mt-10 mb-10 m-0">
+                <div class="widget locationsss no-border sm-text-center mt-10 mb-10 m-0">
 				
 				<?php if(isset($dentalorange['denor_compl'])):  ?>
-                  <i class="fa fa-building-o text-theme-colored font-32 mt-5 mr-sm-0 sm-display-block pull-left flip sm-pull-none"></i>
+                  <!--<i class="fa fa-building-o text-theme-colored font-32 mt-5 mr-sm-0 sm-display-block pull-left flip sm-pull-none"></i> -->
+				  <img src="<?php echo get_template_directory_uri(); ?>/images/map-marker2.png" alt="" />
                   <a href="#" class="font-12 text-gray text-uppercase">Company Location</a>
                   <h5 class="font-13 text-black m-0"><?php echo $dentalorange['denor_compl']; ?></h5>
 				  <?php endif; ?>
@@ -292,7 +293,7 @@
     <div class="header-nav">
       <div class="header-nav-wrapper navbar-scrolltofixed" style="z-index: 999; position: absolute; top: 0px;">
         <div class="container">
-          <nav id="menuzord" class="menuzord red menuzord-responsive"><a href="javascript:void(0)" class="showhide" style="display: none;"><em></em><em></em><em></em></a>
+          <nav id="menuzord" class="menuzord red menuzord-responsive">
 		  
 		  	<?php wp_nav_menu([
 				'theme_location'		=> 'main-menu',
