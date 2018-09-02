@@ -25,8 +25,13 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 	color: #fff;
 }
 .locationsss img {
-	width: 23px;
-	height: 31px;
+	width: 25px;
+}
+
+.locationsss h5 {
+	position: relative;
+	top: -12px;
+	right: -26px;
 }
 .sidebarspost img{
 	height: 160px;
@@ -61,6 +66,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 .menuzord-menu > li {
 	padding: 20px 0px !important;
 }
+
 .modern-header:not(.modern-header-nav-autopadding) .menuzord-menu > li > a {
 	padding: 10px 15px;
 }
@@ -71,6 +77,12 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 }
 #appointment_form_at_home textarea{
 	height: 100px;
+}
+.menuzord-menu > li.appointment-list{
+	padding: 0 !important;
+}
+.menuzord-menu > li.appointment-list a{
+	padding: 30px !important;
 }
 .menuzord.red .menuzord-menu > li.active > a, .menuzord.red .menuzord-menu > li:hover > a, .menuzord.red .menuzord-menu ul.dropdown li:hover > a {
 	background: #ff7f2e !important;
@@ -252,7 +264,9 @@ a.liked span.sl-count,
 
 
 
-
+.bg-lightest {
+	background-color: #eee !important;
+}
 
 
 
@@ -265,5 +279,26 @@ a.liked span.sl-count,
 	}
 	.modern-header:not(.modern-header-nav-autopadding) .menuzord-menu > li > a {
 		padding: 20px 15px;
+	}
+}
+
+
+@media all and (max-width: 768px){
+	#header .bg-theme-colored2 {
+		background: #eee !important;
+		
+	}
+	.locationsss img {
+		width: 25px;
+		display: block;
+		margin: auto;
+	}
+	.locationsss h5 {
+		position: relative;
+		top: 0px;
+		right: 0px;
+	}
+	.header-top .text-white {
+		color: #000 !important;
 	}
 }

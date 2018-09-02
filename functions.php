@@ -9,7 +9,7 @@
  
 function new_nav_menu_items($items, $args) {
     if($args->theme_location == 'main-menu'){
-       $shop_item = '<li class="active pull-right"><a href="'.get_template_directory_uri().'/ajax-load/form-appointment.html" class="ajaxload-popup font-15 line-height-1"><i class="fa fa-calendar-plus-o mr-10 font-28"></i> Request an Appointment</a></li>
+       $shop_item = '<li class="active pull-right appointment-list"><a href="'.get_template_directory_uri().'/ajax-load/form-appointment.html" class="ajaxload-popup font-15 line-height-1"><i class="fa fa-calendar-plus-o mr-10 font-28"></i> Request an Appointment</a></li>
             <li class="scrollable-fix"></li>';
        $items = $items . $shop_item;
 	   

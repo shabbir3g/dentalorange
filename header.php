@@ -182,7 +182,7 @@
             </div>
           </div>
           <div class="col-md-5">
-            <div class="widget pull-right flip sm-pull-none">
+           <!-- <div class="widget pull-right flip sm-pull-none">
               <ul class="nav navbar-nav list-bordered language-switcher">
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="<?php echo get_template_directory_uri(); ?>/images/en.png" alt="En"> ENG <span class="caret"></span></a>
@@ -193,7 +193,7 @@
                   </ul>
                 </li>
               </ul>
-            </div>
+            </div> -->
             <div class="widget pull-right flip sm-pull-none">
               <ul class="list-inline text-right flip sm-text-center">
                 <li>
@@ -255,8 +255,10 @@
 				
 				<?php if(isset($dentalorange['denor_compl'])):  ?>
                   <!--<i class="fa fa-building-o text-theme-colored font-32 mt-5 mr-sm-0 sm-display-block pull-left flip sm-pull-none"></i> -->
+				  
 				  <img src="<?php echo get_template_directory_uri(); ?>/images/map-marker2.png" alt="" />
-                  <a href="#" class="font-12 text-gray text-uppercase">Company Location</a>
+					 <a href="#" class="font-12 text-gray text-uppercase">Company Location</a>
+                 
                   <h5 class="font-13 text-black m-0"><?php echo $dentalorange['denor_compl']; ?></h5>
 				  <?php endif; ?>
 				  
