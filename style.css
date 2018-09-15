@@ -78,8 +78,10 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-com
 #appointment_form_at_home textarea{
 	height: 100px;
 }
-.menuzord-menu > li.appointment-list{
+.menuzord-menu > li.appointment-list {
 	padding: 0 !important;
+	position: relative;
+	left: 15px;
 }
 .menuzord-menu > li.appointment-list a{
 	padding: 30px !important;
@@ -267,6 +269,13 @@ a.liked span.sl-count,
 .bg-lightest {
 	background-color: #eee !important;
 }
+.mobile-headers{
+	display: none;
+}
+.desktop-headers{
+		display: block;
+}
+
 
 
 
@@ -301,4 +310,25 @@ a.liked span.sl-count,
 	.header-top .text-white {
 		color: #000 !important;
 	}
+	.desktop-headers{
+		display: none;
+	}
+	.mobile-headers{
+		display: block;
+	}
+	.mob-location img{
+		width: 10px;
+	}
+	.menuzord-menu > li.appointment-list {
+		padding: 0 !important;
+		position: relative;
+		left: 0;
+	}
+}
+@media all and (max-width: 360px){
+.menuzord-responsive .menuzord-brand {
+	margin: 1px;
+	font-size: 24px;
+	line-height: 2.55;
+}
 }

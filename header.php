@@ -58,119 +58,9 @@
     <div id="disable-preloader" class="btn btn-default btn-sm">Disable Preloader</div>
   </div> -->
   
-  <!-- Header 
-  <header id="header" class="header">
-    <div class="header-top bg-light sm-text-center">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="widget">
-			
-			<?php if(isset($dentalorange['hdleft'])):  ?>
-              <i class="fa fa-clock-o text-theme-colored"></i> <?php echo $dentalorange['hdleft']; ?> 
-			 <?php endif; ?>
-			  
-			 
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="widget">
-              <ul class="list-inline pull-right flip sm-pull-none sm-text-center">
-				
-				<?php if($dentalorange['denor_cell']):  ?>
-                <li><i class="fa fa-phone text-theme-colored"></i> Call Us at <a href="tel:<?php echo $dentalorange['denor_cell']; ?>"><?php echo $dentalorange['denor_cell']; ?></a></li>
-				 <?php endif; ?>
-				 
-				  <?php if($dentalorange['denor_email']):  ?>
-                <li><i class="fa fa-envelope-o text-theme-colored"></i> <a href="mailto:<?php echo $dentalorange['denor_email']; ?>"><?php echo $dentalorange['denor_email']; ?></a></li>
-				 <?php endif; ?>
-				
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="header-nav">
-      <div class="header-nav-wrapper navbar-scrolltofixed bg-white">
-        <div class="container">
-		
-		
-		
-          <nav id="menuzord-right" class="menuzord blue no-bg"><a href="<?php echo home_url(); ?>" class="menuzord-brand pull-left flip mb-15" href="index-mp-layout1.html"><img src="<?php global $dentalorange; echo $dentalorange['logoup']['url']; ?>" alt=""></a>
-		  
-		  
-		 <!-- <ul class="list-inline nav-side-icon-list pull-right">
-              <li>
-                <a href="#fullscreen-search-form" id="fullscreen-search-btn"><i class="search-icon fa fa-search"></i></a>
-                <div id="fullscreen-search-form" class="hanging-top-search-form">
-                  <button type="button" class="close">×</button>
-                  <form>
-                    <input type="search" value="" placeholder="Search keywords(s)" />
-                    <button type="submit"><i class="search-icon fa fa-search"></i></button>
-                  </form>
-                </div>
-              </li>
-              <li>
-                <div class="woocommerce top-nav-mini-cart-icon-container">
-                   <div class="top-nav-mini-cart-icon-contents">
-                      <a class="mini-cart-icon" href="#" title="View your shopping cart"><i class="icon_cart_alt"></i><span class="items-count">2</span> <span class="cart-quick-info">2 items - <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">&pound;</span>38.00</span></span></a>
-                      <div class="dropdown-content">
-                        <div class="dropdown-content-wrapper">
-                          <ul class="woocommerce-mini-cart cart_list product_list_widget ">
-                            <li class="woocommerce-mini-cart-item mini_cart_item">
-                              <a href="#" class="remove" aria-label="Remove this item" data-product_id="3265" data-product_sku="">×</a>
-                              <a href="#"><img src="http://placehold.it/68x68" alt="" width="68">Happy Ninja&nbsp;</a>
-                              <span class="quantity">1 × <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">£</span>18.00</span></span>         
-                            </li>
-                            <li class="woocommerce-mini-cart-item mini_cart_item">
-                              <a href="#" class="remove" aria-label="Remove this item" data-product_id="31" data-product_sku="">×</a>
-                              <a href="#"><img src="http://placehold.it/68x68" alt="" width="68">Ninja Silhouette&nbsp;</a>
-                              <span class="quantity">1 × <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">£</span>20.00</span></span>         
-                            </li>
-                          </ul>
-                          <div class="woocommerce-mini-cart__total total cart-subtotal">Subtotal: <span><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">£</span>38.00</span></span></div>
-                          <div class="woocommerce-mini-cart__buttons buttons cart-action-buttons">
-                            <div class="row">
-                              <div class="col-xs-6 pr-5"><a href="http://kodesolution.net/demo/wp/medicale-wp/cart/" class="btn btn-gray btn-block wc-forward">View Cart</a></div>
-                              <div class="col-xs-6 pl-5"><a href="http://kodesolution.net/demo/wp/medicale-wp/checkout/" class="btn btn-dark btn-theme-colored btn-block checkout wc-forward">Checkout</a></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                   </div>
-                </div>
-              </li>
-              <li><div id="side-panel-trigger" class="side-panel-trigger"><a href="#"><i class="fa fa-bars font-24"></i></a></div></li>
-            </ul> 
-		  
-			<?php wp_nav_menu([
-				'theme_location'		=> 'main-menu',
-				'menu_class'			=> 'menuzord-menu',
-				'container'				=> '',
-				'fallback_cb'			=> 'default_menu',
-			]); ?>
-		 
-			
-			
-			
-          </nav>
-        </div>
-      </div>
-    </div>
-  </header>
   
   
-   -->
-  
-  
-  
-  
-  
-  
-  
-  
-  <header id="header" class="header modern-header modern-header-theme-colored2">
+  <header id="header" class="header modern-header modern-header-theme-colored2 desktop-headers">
     <div class="header-top bg-theme-colored2 sm-text-center">
       <div class="container">
         <div class="row">
@@ -218,7 +108,7 @@
         <div class="row">
           <div class="col-xs-12 col-sm-12 col-md-3">
 		  
-		   <a href="<?php echo home_url(); ?>" class="menuzord-brand pull-left flip sm-pull-center mb-15" href="index-mp-layout1.html"><img src="<?php global $dentalorange; echo $dentalorange['logoup']['url']; ?>" alt=""></a>
+		   <a href="<?php echo home_url(); ?>" class="menuzord-brand pull-left flip sm-pull-center mb-15"><img src="<?php global $dentalorange; echo $dentalorange['logoup']['url']; ?>" alt=""></a>
 		  
           </div>
           <div class="col-xs-12 col-sm-12 col-md-7">
@@ -322,16 +212,92 @@
   
   
   
+  <!-- mobile menu -->
+  
+  
+  
+  <header id="header" class="header mobile-headers">
+    <div class="header-top bg-light sm-text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+		  
+            <div class="widget">
+			<?php if(isset($dentalorange['hdleft'])):  ?>
+              <i class="fa fa-clock-o text-theme-colored"></i> <?php echo $dentalorange['hdleft']; ?> 
+			   <?php endif; ?>
+            </div>
+			
+			
+			<div class="mob-location">
+			<?php if(isset($dentalorange['denor_compl'])):  ?>
+			  <!--<i class="fa fa-building-o text-theme-colored font-32 mt-5 mr-sm-0 sm-display-block pull-left flip sm-pull-none"></i> -->
+			  
+			  <img src="<?php echo get_template_directory_uri(); ?>/images/map-marker2.png" alt="" />
+				 <a href="#" class="font-12 text-gray">Company Location : <?php echo $dentalorange['denor_compl']; ?></a>
+			 
+			  <h5 class="font-13 text-black m-0"></h5>
+			  <?php endif; ?>
+			</div>
+			
+			
+			
+          </div>
+          <div class="col-md-6">
+            <div class="widget">
+			
+              <ul class="list-inline pull-right flip sm-pull-none sm-text-center">
+			  <?php if(isset($dentalorange['denor_cell'])):  ?>
+                <li><i class="fa fa-phone text-theme-colored"></i> Call us for more details <a href="tel:<?php echo $dentalorange['denor_cell']; ?>"><?php echo $dentalorange['denor_cell']; ?></a></li>
+				<?php endif; ?>
+				
+				
+				
+				<?php if(isset($dentalorange['denor_email'])):  ?>
+                <li><i class="fa fa-envelope-o text-theme-colored"></i> <a href="mailto:<?php echo $dentalorange['denor_email']; ?>"> <?php echo $dentalorange['denor_email']; ?></a></li>
+				<?php endif; ?>
+				
+				
+				
+				
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-nav">
+      <div class="header-nav-wrapper navbar-scrolltofixed bg-white" style="z-index: 999;">
+        <div class="container">
+          <nav id="menuzord-right" class="menuzord red no-bg menuzord-responsive">
+		  
+		 <!-- <a href="javascript:void(0)" class="showhide" style="display: none;"><em></em><em></em><em></em></a> -->
+		 
+		 
+		    <a href="<?php echo home_url(); ?>" class="menuzord-brand pull-left flip mb-15"><img src="<?php global $dentalorange; echo $dentalorange['logoup']['url']; ?>" alt=""></a>
+		  
+		  <?php wp_nav_menu([
+				'theme_location'		=> 'main-menu',
+				'menu_class'			=> 'menuzord-menu menuzord-indented scrollable',
+				'container'				=> '',
+				'fallback_cb'			=> 'default_menu',
+			]); 
+			
+			
+			
+			?>
+		  
+            
+          </nav>
+        </div>
+      </div><div></div>
+    </div>
+  </header>
   
   
   
   
-  
-  
-  
-  
-  
-  
+  <!-- mobile menu end -->
   
   
   
