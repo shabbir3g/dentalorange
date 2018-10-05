@@ -275,8 +275,14 @@ a.liked span.sl-count,
 .desktop-headers{
 		display: block;
 }
-
-
+.divider .container {
+	padding-top: 0;
+	padding-bottom: 60px;
+}
+.header-title-breadcrumb{
+	padding-top: 60px !important;
+	padding-bottom: 0 !important;
+}
 
 
 @media all and (max-width: 1000px){
@@ -323,6 +329,10 @@ a.liked span.sl-count,
 		padding: 0 !important;
 		position: relative;
 		left: 0;
+	}
+	.header-title-breadcrumb{
+		padding-top: 0 !important;
+		padding-bottom: 0 !important;
 	}
 }
 @media all and (max-width: 360px){

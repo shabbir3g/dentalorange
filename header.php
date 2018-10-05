@@ -312,7 +312,7 @@
 	<?php if(!is_front_page()): ?>
     <!-- Section: inner-header -->
     <section class="inner-header divider parallax layer-overlay overlay-white-8" data-bg-img="<?php echo get_template_directory_uri(); ?>/images/banner.png">
-      <div class="container pt-60 pb-60">
+      <div class="container header-title-breadcrumb">
         <!-- Section Content -->
         <div class="section-content">
           <div class="row">

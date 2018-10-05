@@ -412,6 +412,22 @@
 					'type'          => 'text',
 					'id'            => 'pinterest'
 				],
+				[
+					'title'         => 'Vk',
+					'type'          => 'text',
+					'id'            => 'vk'
+				],
+				[
+					'title'         => 'Google Plus',
+					'type'          => 'text',
+					'id'            => 'google-plus'
+				],
+				[
+					'title'         => 'Android',
+					'type'          => 'text',
+					'id'            => 'android'
+				],
+				
 			]
 		]);
 

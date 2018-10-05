@@ -11,9 +11,17 @@ get_header(); ?>
       <div class="container">
         <div class="row pt-30">
           <div class="col-md-6">
-            <h3 class="line-bottom mt-0 mb-30">Interested in discussing?</h3>
+		  
+			<?php 
+			
+				$contact_from_title = get_field('contact_from_title');
+			
+			if($contact_from_title ):  ?>
+            <h3 class="line-bottom mt-0 mb-30"> <?php  echo $contact_from_title; ?></h3>
+			
+			<?php endif; ?>
             
-            <!-- Contact Form -->
+            <!-- Contact Form
             <form id="contact_form" name="contact_form" class="" action="includes/sendmail.php" method="post">
 
               <div class="row">
@@ -52,50 +60,128 @@ get_header(); ?>
               </div>
               <div class="form-group">
                 <input name="form_botcheck" class="form-control" type="hidden" value="" />
-                <button type="submit" class="btn btn-dark btn-theme-colored btn-flat mr-5" data-loading-text="Please wait...">Send your message</button>
-                <button type="reset" class="btn btn-default btn-flat btn-theme-colored">Reset</button>
+				
+				<input type="submit" class="btn btn-dark btn-theme-colored btn-flat mr-5" data-loading-text="Please wait..." value="Send your message" />
+				
+				
+				
+				<input type="reset" class="btn btn-default btn-flat btn-theme-colored" value="Reset" />
+                
               </div>
-            </form>
+            </form>  -->
+			
+			
+			<?php 
+			
+			$contact_from_shortcode = get_field('contact_from_shortcode');
+			
+			if($contact_from_shortcode): 
+
+			echo $contact_from_shortcode;
+			
+			endif;
+
+			?>
 
             
           </div>
           <div class="col-md-6">
-            <h3 class="line-bottom mt-0">Get in touch with us</h3>
-            <p>Aliquam officia dolor rerum enim doloremque iusto eos atque tempora dignissimos similique, quae, maxime sit accusantium delectus.</p>
+			<?php  $get_in_touch_title = get_field('get_in_touch_title');
+			
+			if($get_in_touch_title): ?>
+            <h3 class="line-bottom mt-0"><?php echo $get_in_touch_title; ?></h3>
+			<?php endif; ?>
+			
+			<?php  $get_in_touch_description = get_field('get_in_touch_description');
+			
+			if($get_in_touch_description): ?>
+            <p><?php echo $get_in_touch_description; ?></p>
+			<?php endif; ?>
+			
+			
+			
+			
+			<?php if(get_field('social_media_icons') == 'show'):  ?>
             <ul class="styled-icons icon-dark icon-sm icon-circled mb-20">
-              <li><a href="#" data-bg-color="#3B5998"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#" data-bg-color="#02B0E8"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#" data-bg-color="#4C75A3"><i class="fa fa-vk"></i></a></li>
-              <li><a href="#" data-bg-color="#D9CCB9"><i class="fa fa-instagram"></i></a></li>
-              <li><a href="#" data-bg-color="#D71619"><i class="fa fa-google-plus"></i></a></li>
-              <li><a href="#" data-bg-color="#A4CA39"><i class="fa fa-android"></i></a></li>
-              <li><a href="#" data-bg-color="#4C75A3"><i class="fa fa-vk"></i></a></li>
+			
+				<?php if(!empty($dentalorange['facebook'])):  ?>
+				 <li><a href="<?php echo $dentalorange['facebook'];  ?>" data-bg-color="#3B5998"><i class="fa fa-facebook"></i></a></li>
+				<?php endif; ?>
+				
+				<?php if(!empty($dentalorange['twitter'])):  ?>
+				<li><a href="<?php echo $dentalorange['twitter'];  ?>" data-bg-color="#02B0E8"><i class="fa fa-twitter"></i></a></li>
+				<?php endif; ?>
+				
+				
+				<?php if(!empty($dentalorange['vk'])):  ?>
+                 <li><a href="<?php echo $dentalorange['vk'];  ?>" data-bg-color="#4C75A3"><i class="fa fa-vk"></i></a></li>
+				<?php endif; ?>
+				
+				<?php if(!empty($dentalorange['instagram'])):  ?>
+				<li><a href="<?php echo $dentalorange['instagram']; ?>" data-bg-color="#D9CCB9"><i class="fa fa-instagram"></i></a></li>
+				<?php endif; ?>
+				
+				<?php if(!empty($dentalorange['google-plus'])):  ?>
+				  <li><a href="<?php echo $dentalorange['google-plus']; ?>" data-bg-color="#D71619"><i class="fa fa-google-plus"></i></a></li>
+				<?php endif; ?>
+				
+				<?php if(!empty($dentalorange['android'])):  ?>
+				  <li><a href="<?php echo $dentalorange['android']; ?>" data-bg-color="#A4CA39"><i class="fa fa-android"></i></a></li>
+				<?php endif; ?>
+				
             </ul>
-
+			<?php endif; ?>
+			
+			
+			
+			<?php  $location = get_field('location');
+			
+			if($location): ?>
             <div class="icon-box media mb-15"> <a class="media-left pull-left flip mr-20" href="#"> <i class="pe-7s-map-2 text-theme-colored"></i></a>
               <div class="media-body">
-                <h5 class="mt-0">Our Office Location</h5>
-                <p>#405, Lan Streen, Los Vegas, USA</p>
+			  
+				<?php echo $location; ?>
+                
               </div>
             </div>
+			<?php endif; ?>
+			
+			
+			<?php  $contact_number = get_field('contact_number');
+			
+			if($contact_number): ?>
             <div class="icon-box media mb-15"> <a class="media-left pull-left flip mr-15" href="#"> <i class="pe-7s-call text-theme-colored"></i></a>
               <div class="media-body">
-                <h5 class="mt-0">Contact Number</h5>
-                <p><a href="tel:+325-12345-65478">+325-12345-65478</a></p>
+				<?php echo $contact_number; ?>
+               
               </div>
             </div>
+			<?php endif; ?>
+			
+			<?php  $email_address = get_field('email_address');
+			
+			if($email_address): ?>
             <div class="icon-box media mb-15"> <a class="media-left pull-left flip mr-15" href="#"> <i class="pe-7s-mail text-theme-colored"></i></a>
               <div class="media-body">
-                <h5 class="mt-0">Email Address</h5>
-                <p><a href="mailto:supporte@yourdomin.com">supporte@yourdomin.com</a></p>
+			  <?php echo $email_address; ?>
+                
               </div>
             </div>
+			<?php endif; ?>
+			
+			
+			<?php  $make_a_video = get_field('make_a_video');
+			
+			if($make_a_video): ?>
             <div class="icon-box media mb-15"> <a class="media-left pull-left flip mr-20" href="#"> <i class="fa fa-skype text-theme-colored"></i></a>
               <div class="media-body">
-                <h5 class="mt-0">Make a Video Call</h5>
-                <p>ThemeMascotSkype</p>
+			  <?php echo $make_a_video; ?>
+               
               </div>
             </div>
+			<?php endif; ?>
+			
+			
           </div>
         </div>
       </div>
@@ -106,7 +192,13 @@ get_header(); ?>
       <div class="container-fluid pt-0 pb-0">
         <div class="row">
 		
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3318.922552700279!2d-117.88797298479396!3d33.71095288070026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcd8d111d9280f%3A0xd18aeee755ca4ecc!2sOC+Dental+Center!5e0!3m2!1sen!2sbd!4v1538159809730" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+		<?php  $google_maps = get_field('google_maps');
+			
+			if($google_maps): ?>
+           
+			  <?php echo $google_maps; ?>
+               
+			<?php endif; ?>
 
           <!-- Google Map HTML Codes 
           <div 
