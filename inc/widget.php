@@ -239,7 +239,222 @@
 	}
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	// Dental Orange Services title
+	class dental_orange_services_title extends WP_Widget{
 
+		public function __construct(){
+			parent::__construct('dental_orange_services_title','Dental Services Title', [
+				'description'				=> 'Dental Services Title'
+			]);
+		}
+
+		public function widget($one, $two){ 
+				$title = isset($two['title']) ? $two['title'] : '' ;
+			?>
+			
+	
+			<?php echo $one['before_widget']; ?>
+               <?php echo $one['before_title']; ?><?php echo $title ; ?><?php echo $one['after_title']; ?>
+                <ul class="list-divider list-border list check widget-servicesss">
+				
+				<?php 
+				
+				$recentpost = new WP_Query([
+					'post_type'				=> 'services',
+					'posts_per_page'		=> -1,
+				]);
+				
+				
+				while($recentpost->have_posts()): $recentpost->the_post(); ?>
+                  <li><a href="#"><?php the_title(); ?></a></li>
+                 <?php endwhile; ?>
+                </ul>
+              <?php echo $one['after_widget']; ?>
+             
+			
+		<?php }
+		public function form($two){ 
+				$title = isset($two['title']) ? $two['title'] : '' ;
+			?>
+			<p>
+				<label for="<?php echo $this -> get_field_id('title'); ?>">Title</label>
+				<input name="<?php echo $this -> get_field_name('title'); ?>" id="<?php echo $this -> get_field_id('title'); ?>" value="<?php echo $title ; ?>" class="widefat" type="text">
+			</p>
+		<?php }
+
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	// Dental Orange Page Sidebar Opening Hours
+	class dental_orange_opening_hours_page extends WP_Widget{
+
+		public function __construct(){
+			parent::__construct('dental_orange_opening_hours_page','Dental Page Opening Hours', [
+				'description'				=> 'Dental Page Orange Opening Hours'
+			]);
+		}
+
+		public function widget($one, $two){ 
+				$title = isset($two['title']) ? $two['title'] : '' ;
+				$days1 = isset($two['days1']) ? $two['days1'] : '' ;
+				$days2 = isset($two['days2']) ? $two['days2'] : '' ;
+				$days3 = isset($two['days3']) ? $two['days3'] : '' ;
+				$days4 = isset($two['days4']) ? $two['days4'] : '' ;
+				$days5 = isset($two['days5']) ? $two['days5'] : '' ;
+			?>
+			
+
+			
+			
+			<?php echo $one['before_widget']; ?>
+                <div class="border-10px p-30">
+                  <h5><i class="fa fa-clock-o text-theme-colored"></i> <?php echo $title ; ?></h5>
+                  <div class="opening-hours text-left">
+                    <ul class="list-unstyled">
+                      <li class="clearfix line-height-1"> <span> Mon - Tues : </span>
+                        <div class="value"> <?php echo $days1; ?> </div>
+                      </li>
+                      <li class="clearfix line-height-1"> <span> Wednes - Thurs : </span>
+                        <div class="value"> <?php echo $days2; ?> </div>
+                      </li>
+                      <li class="clearfix line-height-1"> <span>  Fri - Sat: </span>
+                        <div class="value"> <?php echo $days3; ?> </div>
+                      </li>
+					   <li class="clearfix line-height-1"> <span>  Sun : </span>
+                        <div class="value"> <?php echo $days3; ?> </div>
+                      </li>
+                    </ul>
+                  </div>
+				  <?php if(!empty($days5)): ?>
+                  <a href="<?php echo $days5; ?>" class="btn btn-dark btn-theme-colored mt-15">View Hospital Details</a>
+				  <?php endif; ?>
+                </div>
+             <?php echo $one['after_widget']; ?>
+			
+			
+			
+			
+		<?php }
+		public function form($two){ 
+				$title = isset($two['title']) ? $two['title'] : '' ;
+				$days1 = isset($two['days1']) ? $two['days1'] : '' ;
+				$days2 = isset($two['days2']) ? $two['days2'] : '' ;
+				$days3 = isset($two['days3']) ? $two['days3'] : '' ;
+				$days4 = isset($two['days4']) ? $two['days4'] : '' ;
+				$days5 = isset($two['days5']) ? $two['days5'] : '' ;
+			?>
+			<p>
+				<label for="<?php echo $this -> get_field_id('title'); ?>">Title</label>
+				<input name="<?php echo $this -> get_field_name('title'); ?>" id="<?php echo $this -> get_field_id('title'); ?>" value="<?php echo $title ; ?>" class="widefat" type="text">
+			</p>
+			<p>
+				<label for="<?php echo $this -> get_field_id('days1'); ?>">Mon - Tues :</label>
+				<input name="<?php echo $this -> get_field_name('days1'); ?>" id="<?php echo $this -> get_field_id('days1'); ?>" value="<?php echo $days1 ; ?>" class="widefat" type="text">
+			</p>
+			<p>
+				<label for="<?php echo $this -> get_field_id('days2'); ?>">Wednes - Thurs :</label>
+				<input name="<?php echo $this -> get_field_name('days2'); ?>" id="<?php echo $this -> get_field_id('days2'); ?>" value="<?php echo $days2 ; ?>" class="widefat" type="text">
+			</p>
+			<p>
+				<label for="<?php echo $this -> get_field_id('days3'); ?>">Fri - Sat: </label>
+				<input name="<?php echo $this -> get_field_name('days3'); ?>" id="<?php echo $this -> get_field_id('days3'); ?>" value="<?php echo $days3 ; ?>" class="widefat" type="text">
+			</p>
+			
+			<p>
+				<label for="<?php echo $this -> get_field_id('days4'); ?>">Sun : </label>
+				<input name="<?php echo $this -> get_field_name('days4'); ?>" id="<?php echo $this -> get_field_id('days4'); ?>" value="<?php echo $days4 ; ?>" class="widefat" type="text">
+			</p>
+			<p>
+				<label for="<?php echo $this -> get_field_id('days5'); ?>">View Hospital Details Link </label>
+				<input name="<?php echo $this -> get_field_name('days5'); ?>" id="<?php echo $this -> get_field_id('days5'); ?>" value="<?php echo $days5 ; ?>" class="widefat" type="url">
+			</p>
+			
+			
+		
+			
+		<?php }
+
+	}
+	
+	
+	
+	// gallery post slider for page widget
+	
+	class dental_orange_post_slider extends WP_Widget{
+
+		public function __construct(){
+			parent::__construct('dental_orange_post_slider','Dental Orange slider Posts', [
+				'description'				=> 'Dental Orange slider Posts'
+			]);
+		}
+
+		public function widget($one, $two){ 
+				$title = isset($two['title']) ? $two['title'] : '' ;
+			?>
+				
+				
+				
+				
+			<?php echo $one['before_widget']; ?>
+               <?php echo $one['before_title']; ?><?php echo $title ; ?><?php echo $one['after_title']; ?>
+                <div class="owl-carousel-1col">
+				
+				<?php 
+				
+				$recentpost = new WP_Query([
+					'post_type'				=> 'post',
+					'posts_per_page'		=> 3,
+				]);
+				
+				
+				while($recentpost->have_posts()): $recentpost->the_post(); ?>
+                  <div class="item">
+                    <?php if(has_post_thumbnail()):  ?>
+                    <?php the_post_thumbnail('slider-widget-post'); ?>
+					<?php endif; ?>
+                    <h4 class="title"><?php the_title(); ?></h4>
+                    <p><?php echo wp_trim_words(get_the_content(), 12, false); ?></p>
+                  </div>
+                   <?php endwhile; ?>
+				  
+				  
+				  
+                </div>
+               <?php echo $one['after_widget']; ?>
+				
+				
+			
+		<?php }
+		public function form($two){ 
+				$title = isset($two['title']) ? $two['title'] : '' ;
+			?>
+			<p>
+				<label for="<?php echo $this -> get_field_id('title'); ?>">Title</label>
+				<input name="<?php echo $this -> get_field_name('title'); ?>" id="<?php echo $this -> get_field_id('title'); ?>" value="<?php echo $title ; ?>" class="widefat" type="text">
+			</p>
+		<?php }
+
+	}
+	
+	
+	
+	
 	
 	
 function dental_widgets_init() {
@@ -248,6 +463,9 @@ function dental_widgets_init() {
 	register_widget('dental_orange_about');
 	register_widget('dental_orange_latest_news');
 	register_widget('dental_orange_opening_hours');
+	register_widget('dental_orange_services_title');
+	register_widget('dental_orange_opening_hours_page');
+	register_widget('dental_orange_post_slider');
 
 
 }

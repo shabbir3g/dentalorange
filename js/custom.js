@@ -5,6 +5,8 @@ var THEMEMASCOT = {};
 	
     "use strict";
 	
+	$('ul.widget-servicesss li:nth-child(1) a').addClass('text-theme-colored');
+	
 	
 	$("ul.menuzord-menu li ul").addClass('dropdown');
 	

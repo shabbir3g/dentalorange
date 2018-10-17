@@ -7,9 +7,6 @@
  * @package dentalorange
  */
 
-if ( ! is_active_sidebar( 'sidebar-1' ) ) {
-	return;
-}
 ?>
 
 <div class="sidebar sidebar-right mt-sm-30">

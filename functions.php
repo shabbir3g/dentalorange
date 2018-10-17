@@ -338,6 +338,18 @@ function dentalorange_widgets_init() {
 		'before_title'  => '<h4 class="widget-title line-bottom">',
 		'after_title'   => '</h4>',
 	) );
+	
+	
+	register_sidebar( array(
+		'name'          => esc_html__( 'Page Sidebar', 'dentalorange' ),
+		'id'            => 'page-widget',
+		'description'   => esc_html__( 'Add widgets here.', 'dentalorange' ),
+		'before_widget' => '  <div class="widget">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h5 class="widget-title line-bottom">',
+		'after_title'   => '</h5>',
+	) );
+	
 }
 add_action( 'widgets_init', 'dentalorange_widgets_init' );
 

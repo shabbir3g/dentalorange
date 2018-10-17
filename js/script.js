@@ -4,6 +4,9 @@
 	$(document).ready(function(){
 		
 		
+		
+		
+		
 		$('.navbar-nav li a').addClass('nav-link');
 		$('.navbar-nav li ul').addClass('dropdown-menu');
 		$('.navbar-nav li.menu-item-has-children').addClass('dropdown');

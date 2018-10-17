@@ -283,7 +283,9 @@ a.liked span.sl-count,
 	padding-top: 60px !important;
 	padding-bottom: 0 !important;
 }
-
+.attachment-slider-widget-post{
+	height: 230px;
+}
 
 @media all and (max-width: 1000px){
 	.menuzord-menu > li {
